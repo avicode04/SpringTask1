@@ -6,14 +6,29 @@
 
     <!-- bean definitions here -->
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="actor">
-            <bean id="actor" class="com.stackroute.domain.Actor">
-                <property name="name" value="Avinash"></property>
-                <property name="age" value="23"></property>
-                <property name="gender" value="M"></property>
+    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg name="actor1">
+            <bean id="actor1" class="com.stackroute.domain.Actor">
+                <constructor-arg name="name" value="Avi"></constructor-arg>
+                <constructor-arg name="gender" value="M"></constructor-arg>
+                <constructor-arg name="age" value="23"></constructor-arg>
             </bean>
-        </property>
+        </constructor-arg>
+        <constructor-arg name="actor2">
+            <bean id="actor2" class="com.stackroute.domain.Actor">
+                <constructor-arg name="name" value="Kunal"></constructor-arg>
+                <constructor-arg name="gender" value="M"></constructor-arg>
+                <constructor-arg name="age" value="23"></constructor-arg>
+            </bean>
+        </constructor-arg>
+        <constructor-arg name="actor3">
+            <bean id="actor2" class="com.stackroute.domain.Actor">
+                <constructor-arg name="name" value="Utkarsh"></constructor-arg>
+                <constructor-arg name="gender" value="M"></constructor-arg>
+                <constructor-arg name="age" value="23"></constructor-arg>
+            </bean>
+        </constructor-arg>
+
     </bean>
 
 </beans>
