@@ -1,12 +1,14 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Actor {
+
     private String name;
     private String gender;
     private int age;
 
     public void setName(String name) {
-        System.out.println("Actor hired...");
         this.name = name;
     }
 
@@ -15,6 +17,12 @@ public class Actor {
     }
 
     public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
         this.age = age;
     }
 
