@@ -8,6 +8,7 @@ public class FilmIndustry {
     public static void main(String args[]){
         XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
         Movie movie =  factory.getBean("movie",Movie.class);
+        System.out.println("Movie");
         movie.getActor();
     }
 }
