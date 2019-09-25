@@ -9,6 +9,8 @@
     <bean id="life" class="com.stackroute.demo.BeanLifeCycleDemoBean"  init-method="customInit" destroy-method="customDestroy"
     />
 
+    <bean id="post" class="com.stackroute.demo.BeanPostProcessorDemo"/>
+
     <bean id="movie" class="com.stackroute.domain.Movie"  autowire="constructor"/>
     <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="Avi"/>
